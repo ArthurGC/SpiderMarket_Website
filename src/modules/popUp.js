@@ -12,9 +12,9 @@ const openPopUp = () => {
 }
 
 export const fillPopUp = (event) => {
-  openPopUp();
   let isButton = event.target.classList.contains('button');
   if (isButton) {
+    openPopUp();
     const id = event.target.dataset.id;
     const mainGrid = getDataLocalStorage();
     const element = mainGrid[id];

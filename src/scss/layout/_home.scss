@@ -9,6 +9,12 @@ header {
     text-decoration: none;
     color: rgb(253, 173, 0);
   }
+
+  .navbar {
+    li {
+      @include muli-text(14px, 500, 24px);
+    }
+  }
 }
 
 .container {
