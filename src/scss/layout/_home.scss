@@ -1,3 +1,26 @@
 section {
     display: none;
+}
+
+header {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+  @include flex(row, center, space-between);
+  .logo {
+    @include muli-text(24px, 500, 32px, 0.7);
   }
+}
+
+.container {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+  margin-inline: auto;
+  max-width: 1400px;
+
+}
+
+footer {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+
+  .text-footer {
+    @include muli-text(12px, 500, 32px);
+  }
+}
