@@ -5,10 +5,12 @@ const title = document.querySelector('.modal-title');
 const paragraph = document.querySelector('.dsc');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
+const main = document.querySelector('body');
 
 const openPopUp = () => {
   overlay.classList.add('active');
   modal.classList.add('active');
+  main.style.overflow = 'hidden';
 }
 
 export const fillPopUp = (event) => {
@@ -27,4 +29,5 @@ export const fillPopUp = (event) => {
 export const closePopUp = () => {
   overlay.classList.remove('active');
   modal.classList.remove('active');
+  main.style.overflow = '';
 }

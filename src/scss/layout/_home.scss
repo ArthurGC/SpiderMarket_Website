@@ -18,12 +18,12 @@ header {
 }
 
 .container {
-  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 2vw);
   margin-inline: auto;
-  max-width: 1400px;
+  max-width: 1200px;
   @include flex(row, center, center);
   flex-wrap: wrap;
-  gap: calc(1rem + 0.3vw);
+  gap: calc(1rem + 3vw);
   
   .item {
     min-width: 250px;
