@@ -1,0 +1,8 @@
+@use '../utilities' as *;
+.container {
+    .button:hover {
+        background: rgb(247, 60, 60);
+        color: #fff;
+    }
+}
+
