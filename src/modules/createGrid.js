@@ -1,7 +1,6 @@
 export const createGrid = (arrayComics) => {
     let containerJS = document.createDocumentFragment();
     let mainContainer = document.querySelector('.container');
-    arrayComics.splice(7,1); //Short fixed to get right info
 
     arrayComics.forEach((comic,index) => {
         let container = document.createElement('li');
@@ -17,6 +16,7 @@ export const createGrid = (arrayComics) => {
         name.textContent = `${comic.show.name} ${index}`;
         likeAmount.textContent = 0;
         button.textContent = 'Comments';
+        button.dataset.id = `${comic.show.id}`;
 
         imgContainer.appendChild(image);
         likeBox.appendChild(name);
