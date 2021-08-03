@@ -11,7 +11,7 @@ export function showpopUp (event) {
         let paragraph = document.querySelector(".par");
         image.setAttribute("src", `${element.show.image.original}`);
         title.textContent = `${element.show.name}`; 
-        paragraph.textContent = `${element.show.summary}`; 
+        paragraph.innerHTML = `${element.show.summary}`; 
 
     }
 }
