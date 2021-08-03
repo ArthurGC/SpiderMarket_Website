@@ -11,23 +11,23 @@ const openPopUp = () => {
   overlay.classList.add('active');
   modal.classList.add('active');
   main.style.overflow = 'hidden';
-}
+};
 
 export const fillPopUp = (event) => {
-  let isButton = event.target.classList.contains('button');
+  const isButton = event.target.classList.contains('button');
   if (isButton) {
     openPopUp();
-    const id = event.target.dataset.id;
+    const { id } = event.target.dataset;
     const mainGrid = getDataLocalStorage();
     const element = mainGrid[id];
     image.setAttribute('src', `${element.show.image.original}`);
     title.textContent = `${element.show.name}`;
     paragraph.innerHTML = `${element.show.summary}`;
   }
-}
+};
 
 export const closePopUp = () => {
   overlay.classList.remove('active');
   modal.classList.remove('active');
   main.style.overflow = '';
-}
+};

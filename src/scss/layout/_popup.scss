@@ -3,8 +3,8 @@
 .modal {
   background: #fff;
   padding: calc(1.5rem + 0.3vw);
-  max-width:calc(200px + 30vw);
-  max-height:calc(100% - 70px);
+  max-width: calc(200px + 30vw);
+  max-height: calc(100% - 70px);
   overflow: auto;
   opacity: 0;
   visibility: hidden;
@@ -13,7 +13,7 @@
 
   .fa-times {
     float: right;
-    font-size: calc(2rem + .5vw);
+    font-size: calc(2rem + 0.5vw);
     cursor: pointer;
   }
 
@@ -21,6 +21,7 @@
     margin-inline: auto;
     min-width: 180px;
     max-width: 250px;
+
     .image {
       width: 100%;
     }
@@ -28,6 +29,7 @@
 
   .modal-title {
     @include muli-text(24px, 700, 24px);
+
     text-align: center;
     margin: 1rem 0;
   }
@@ -37,6 +39,7 @@
 
     .dsc {
       text-align: center;
+
       @include muli-text(16px, 500, 24px);
     }
   }
@@ -46,12 +49,14 @@
 
     h3 {
       @include muli-text(16px, 700, 24px);
+
       margin: 1rem 0;
     }
 
     .comment {
       @include muli-text(14px, 500, 24px);
-      margin: .5rem 0;
+
+      margin: 0.5rem 0;
     }
   }
 
@@ -60,6 +65,7 @@
 
     h4 {
       @include muli-text(16px, 700, 24px);
+
       margin: 1rem 0;
     }
 
@@ -67,8 +73,9 @@
       .form-item {
         input {
           @include muli-text(14px, 500, 24px);
+
           margin: 0.8rem 0;
-          padding: .4rem;
+          padding: 0.4rem;
           border-radius: 8px;
         }
 
@@ -77,11 +84,13 @@
           padding: 0.3rem 0.8rem;
           text-align: center;
           cursor: pointer;
+
           @include muli-text(12px, 700, 24px);
+
           background: blue;
           color: #fff;
           border-radius: 8px;
-          transition: background .5s, color .5s;
+          transition: background 0.5s, color 0.5s;
         }
       }
     }
@@ -103,7 +112,9 @@
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
+
   @include flex(row, center, center);
+
   transition: opacity 1s, transform 1s, visibility 0s;
   background: rgba($color: #8c9197, $alpha: 0.5);
   z-index: 200;

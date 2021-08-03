@@ -1,5 +1,5 @@
 import { createGrid } from './createGrid.js';
-import { setDataLocalStorage } from './store.js'
+import { setDataLocalStorage } from './store.js';
 
 const dataURL = 'https://api.tvmaze.com/search/shows?q=spiderman';
 const getComics = async () => {
@@ -9,9 +9,9 @@ const getComics = async () => {
 };
 
 export const getData = () => {
-    getComics().then((result) => {
-        result.splice(7, 1);
-        setDataLocalStorage(result);
-        createGrid(result);
-    });
-}
+  getComics().then((result) => {
+    result.splice(7, 1);
+    setDataLocalStorage(result);
+    createGrid(result);
+  });
+};

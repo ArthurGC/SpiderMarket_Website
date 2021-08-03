@@ -1,20 +1,19 @@
 @use '../utilities' as *;
+
 .container {
-    .button:hover {
-        background: rgb(247, 60, 60);
-        color: #fff;
-    }
+  .button:hover {
+    background: rgb(247, 60, 60);
+    color: #fff;
+  }
 }
 
 .overlay {
-    .form {
-        .list-input {
-            .modal-button:hover {
-                background: rgb(253, 173, 0);
-                color: #000;
-            }
-        }
+  .form {
+    .list-input {
+      .modal-button:hover {
+        background: rgb(253, 173, 0);
+        color: #000;
+      }
     }
-    
+  }
 }
-
