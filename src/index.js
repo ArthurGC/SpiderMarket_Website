@@ -1,7 +1,5 @@
-import { createGrid } from './modules/createGrid.js';
 import { getData } from './modules/getData.js';
 import { showpopUp } from './modules/popUp.js';
-import { getDataLocalStorage, setDataLocalStorage } from './modules/store.js';
 import './styles.scss';
 
 const container = document.querySelector('.container');
