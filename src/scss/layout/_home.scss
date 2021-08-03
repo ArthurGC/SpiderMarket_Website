@@ -1,0 +1,86 @@
+@use '../utilities' as *;
+
+header {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+
+  @include flex(row, center, space-between);
+
+  .logo {
+    @include muli-text(24px, 500, 32px, 0.7);
+
+    text-decoration: none;
+    color: rgb(253, 173, 0);
+  }
+
+  .navbar {
+    li {
+      @include muli-text(14px, 500, 24px);
+    }
+  }
+}
+
+.container {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 2vw);
+  margin-inline: auto;
+  max-width: 1200px;
+
+  @include flex(row, center, center);
+
+  flex-wrap: wrap;
+  gap: calc(1rem + 3vw);
+
+  .item {
+    min-width: 250px;
+    max-width: 280px;
+
+    .img-container {
+      .img {
+        width: 100%;
+        max-height: 389px;
+      }
+    }
+
+    .like-container {
+      @include flex(row, center, space-between);
+
+      padding: 0.5rem;
+
+      .title {
+        @include muli-text(14px, 500, 24px);
+
+        flex-basis: 75%;
+      }
+
+      .icon-heart {
+        font-size: calc(1rem + 0.2vw);
+        color: red;
+        cursor: pointer;
+      }
+
+      .likes {
+        @include muli-text(14px, 500, 32px);
+      }
+    }
+
+    .button {
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      text-align: center;
+      cursor: pointer;
+
+      @include muli-text(12px, 500, 24px);
+
+      background: rgb(253, 173, 0);
+      border-radius: 8px;
+      transition: background 0.5s, color 0.5s;
+    }
+  }
+}
+
+footer {
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+
+  .text-footer {
+    @include muli-text(12px, 500, 32px);
+  }
+}

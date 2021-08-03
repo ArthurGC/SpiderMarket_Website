@@ -1,16 +1,33 @@
 import { getDataLocalStorage } from './store.js';
 
-export function showpopUp(event) {
-  document.querySelector('section').style.display = 'block';
-  if (event.target.classList.contains('button')) {
+const image = document.querySelector('.image');
+const title = document.querySelector('.modal-title');
+const paragraph = document.querySelector('.dsc');
+const overlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
+const main = document.querySelector('body');
+
+const openPopUp = () => {
+  overlay.classList.add('active');
+  modal.classList.add('active');
+  main.style.overflow = 'hidden';
+};
+
+export const fillPopUp = (event) => {
+  const isButton = event.target.classList.contains('button');
+  if (isButton) {
+    openPopUp();
     const { id } = event.target.dataset;
     const mainGrid = getDataLocalStorage();
     const element = mainGrid[id];
-    const image = document.querySelector('.image');
-    const title = document.querySelector('.title');
-    const paragraph = document.querySelector('.par');
     image.setAttribute('src', `${element.show.image.original}`);
     title.textContent = `${element.show.name}`;
     paragraph.innerHTML = `${element.show.summary}`;
   }
-}
+};
+
+export const closePopUp = () => {
+  overlay.classList.remove('active');
+  modal.classList.remove('active');
+  main.style.overflow = '';
+};
