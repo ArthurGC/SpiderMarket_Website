@@ -13,8 +13,8 @@ window.addEventListener('load', () => {
   createGrid(mainGrid);
   const container = document.querySelector('.container');
   container.addEventListener('click', (e) => showpopUp(e));
-  const x = document.querySelector('.X');
-  x.addEventListener('click', () => {
+  const close = document.querySelector('.fa-times');
+  close.addEventListener('click', () => {
     document.querySelector('section').style.display = 'none';
   });
 });
