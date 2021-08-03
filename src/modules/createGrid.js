@@ -13,8 +13,10 @@ export const createGrid = (arrayComics) => {
     const button = document.createElement('button');
 
     container.classList.add('item');
+    imgContainer.classList.add('img-container');
     image.classList.add('img');
     image.setAttribute('src', `${comic.show.image.original}`);
+    likeBox.classList.add('like-container');
     name.classList.add('title');
     name.textContent = `${comic.show.name} ${index}`;
     likeIcon.classList.add('far', 'fa-heart', 'icon-heart');
