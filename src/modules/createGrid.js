@@ -16,7 +16,7 @@ export const createGrid = (arrayComics) => {
         name.textContent = `${comic.show.name} ${index}`;
         likeAmount.textContent = 0;
         button.textContent = 'Comments';
-        button.dataset.id = `${comic.show.id}`;
+        button.dataset.id = `${index}`;
 
         imgContainer.appendChild(image);
         likeBox.appendChild(name);
