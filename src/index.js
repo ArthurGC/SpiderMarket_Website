@@ -1,6 +1,12 @@
 import { createGrid } from './modules/createGrid.js';
-import { mainGrid } from './modules/getData.js';
+import { getComics } from './modules/getData.js'
+import { getDataLocalStorage, setDataLocalStorage } from './modules/store.js';
 
 window.addEventListener('load', ()=> {
-    createGrid(mainGrid)
+    getComics().then( result => {
+        result.splice(7,1); 
+        setDataLocalStorage(result);
+    })
+    let mainGrid = getDataLocalStorage();
+    createGrid(mainGrid);
 })
