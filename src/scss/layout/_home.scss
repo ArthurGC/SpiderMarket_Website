@@ -1,15 +1,13 @@
 @use '../utilities' as *;
 
-section {
-    display: none;
-}
-
 header {
   padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
   @include flex(row, center, space-between);
 
   .logo {
     @include muli-text(24px, 500, 32px, 0.7);
+    text-decoration: none;
+    color: rgb(253, 173, 0);
   }
 }
 
@@ -37,11 +35,11 @@ header {
 
       .title {
         @include muli-text(14px, 500, 24px);
-        flex-basis: 80%;
+        flex-basis: 75%;
       }
 
       .icon-heart {
-        font-size: 1rem;
+        font-size: calc(1rem + .2vw);
         color: red;
         cursor: pointer;
       }
@@ -56,6 +54,10 @@ header {
       padding: .3rem .8rem;
       text-align: center;
       cursor: pointer;
+      @include muli-text(12px, 500, 24px);
+      background: rgb(253, 173, 0);
+      border-radius: 8px;
+      transition: background .5s, color .5s;
     }
   }
 }
