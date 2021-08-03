@@ -14,6 +14,7 @@ export const createGrid = (arrayComics) => {
 
     image.setAttribute('src', `${comic.show.image.original}`);
     name.textContent = `${comic.show.name} ${index}`;
+    likeIcon.classList.add('far', 'fa-heart');
     likeAmount.textContent = 0;
     button.textContent = 'Comments';
     button.dataset.id = `${index}`;
