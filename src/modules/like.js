@@ -18,3 +18,16 @@ export const createApp = async () => {
 };
 
 //   1skhHeMuaX5lQlDsoElJ
+const createLikes = async (id) => {
+  const response = await fetch(likeURL, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      item_id: `${id}`,
+    }),
+  });
+  const status = await response;
+  return status;
+};
