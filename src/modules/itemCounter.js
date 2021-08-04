@@ -7,3 +7,5 @@ export const addCounterDOM = () => {
   const counterDOM = document.querySelector('.items-counter');
   counterDOM.innerHTML = `<b>(${itemCounter()})<b>`;
 };
+
+module.exports = itemCounter;
