@@ -11,11 +11,11 @@ const getDrawComics = async () => {
 };
 
 export const getData = () => {
-  getDrawComics().then(result => {
+  getDrawComics().then((result) => {
     result.splice(7, 1);
     setDataLocalStorage(result);
     createGrid(result);
     addCounterDOM();
     getListLikesAPI();
-  })
+  });
 };
