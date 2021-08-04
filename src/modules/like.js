@@ -44,3 +44,11 @@ const getLikes = async () => {
     const status = await response.json();
     return status;
 };
+
+const distributeLikes = (likesListAPI) => {
+    let likeCounter = [...document.querySelectorAll('.likes')];
+    likesListAPI.forEach( object => {
+        let id = parseInt(object.item_id,10);
+        likeCounter[id].textContent = object.likes;
+    });
+}
