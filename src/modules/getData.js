@@ -15,6 +15,7 @@ export const getData = () => {
     result.splice(7, 1);
     setDataLocalStorage(result);
     createGrid(result);
+    addCounterDOM();
     getListLikesAPI();
   })
 };
