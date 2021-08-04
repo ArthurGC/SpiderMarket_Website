@@ -31,3 +31,11 @@ const createLikes = async (id) => {
   const status = await response;
   return status;
 };
+
+export const sendLikes = (event) => {
+    const isLikeBtn = event.target.classList.contains('icon-heart');
+    if (isLikeBtn) {
+        const { id } = event.target.dataset;
+        createLikes(id);
+    }
+}
