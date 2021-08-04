@@ -37,3 +37,10 @@ export const sendLikes = (event) => {
     createLikes(id);
   }
 };
+
+const getLikes = async () => {
+    const response = await fetch(likeURL);
+  
+    const status = await response.json();
+    return status;
+};
