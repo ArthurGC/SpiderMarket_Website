@@ -1,4 +1,5 @@
 import { createGrid } from './createGrid.js';
+
 import { setDataLocalStorage } from './store.js';
 
 const dataURL = 'https://api.tvmaze.com/search/shows?q=spiderman';
