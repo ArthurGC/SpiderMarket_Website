@@ -20,8 +20,10 @@ export const createGrid = (arrayComics) => {
     name.classList.add('title');
     name.textContent = `${comic.show.name} ${index}`;
     likeIcon.classList.add('far', 'fa-heart', 'icon-heart');
+    likeIcon.dataset.id = `${index}`;
     likeAmount.classList.add('likes');
     likeAmount.textContent = 0;
+    likeAmount.dataset.id = `${index}`;
     button.textContent = 'Comments';
     button.dataset.id = `${index}`;
     button.classList.add('button');
