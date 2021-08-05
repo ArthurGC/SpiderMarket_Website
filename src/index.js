@@ -22,7 +22,7 @@ buttonModal.addEventListener('click', (e) => {
   const titleid = document.querySelector('.modal-title').dataset.id;
   const inputName = document.querySelector('.inputName').value;
   const inputComment = document.querySelector('.inputComment').value;
-  if (inputName !== null & inputComment !== null){
+  if (inputName !== null && inputComment !== null) {
     createNewComment(titleid, inputName, inputComment);
     document.querySelector('.form').reset();
   }

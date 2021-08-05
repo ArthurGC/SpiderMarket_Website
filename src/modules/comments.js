@@ -1,4 +1,4 @@
-import { addCounterCommmentDOM } from "./commentCounter";
+import { addCounterCommmentDOM } from './commentCounter.js';
 
 const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
 
