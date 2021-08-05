@@ -3,9 +3,9 @@ const itemCounterComments = () => {
     return items.length;
   };
 
-  export const addCounterDOM = () => {
+  export const addCounterCommmentDOM = () => {
     const counterDOM = document.querySelector('.counter');
     counterDOM.innerHTML = `<b>(${itemCounterComments()})<b>`;
   };
   
-  export default itemCounter;
+  export default itemCounterComments;

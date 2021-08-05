@@ -1,6 +1,6 @@
 import { getDataLocalStorage } from './store.js';
 import { getComments } from './comments.js';
-import { addCounterDOM } from './itemCounter.js';
+import { addCounterCommmentDOM } from './commentCounter.js';
 
 const image = document.querySelector('.image');
 const title = document.querySelector('.modal-title');
@@ -43,7 +43,7 @@ const commentsPopUp = (id) => {
 
         divComments.appendChild(popUpCommentsTitle);
         divComments.appendChild(popUpCommentsContainer);
-        addCounterDOM();
+        addCounterCommmentDOM();
       }
     });
 };

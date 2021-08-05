@@ -1,3 +1,5 @@
+import { addCounterCommmentDOM } from "./commentCounter";
+
 const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
 
 export const getComments = async (itemID) => {
@@ -47,7 +49,7 @@ export const createNewComment = async (commID, commUserName, comm) => {
 
         divComments.appendChild(popUpCommentsTitle);
         divComments.appendChild(popUpCommentsContainer);
-        addCounterDOM();
+        addCounterCommmentDOM();
       }
     });
 
