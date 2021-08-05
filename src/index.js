@@ -2,7 +2,7 @@ import { getData } from './modules/getData.js';
 import { sendLikes } from './modules/like.js';
 import { fillPopUp, closePopUp } from './modules/popUp.js';
 import './styles.scss';
-import  {createNewComment}  from './modules/comments.js';
+import { createNewComment } from './modules/comments.js';
 
 const container = document.querySelector('.container');
 const close = document.querySelector('.close');
@@ -22,10 +22,8 @@ buttonModal.addEventListener('click', (e) => {
   const titleid = document.querySelector('.modal-title').dataset.id;
   const inputName = document.querySelector('.inputName').value;
   const inputComment = document.querySelector('.inputComment').value;
-  createNewComment(titleid,inputName,inputComment)
+  createNewComment(titleid, inputName, inputComment);
   document.querySelector('.form').reset();
-})
-
-
+});
 
 close.addEventListener('click', closePopUp);

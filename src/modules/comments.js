@@ -1,34 +1,26 @@
+const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
 
- let postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
- 
- 
- const createNewApp = async () => {
-    const rawResp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    });
+export const getComments = async (itemID) => {
+  const getURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments?item_id=${itemID}`;
+  const rawResp = await fetch(getURL);
+  const comments = await rawResp.json();
+  return comments;
+};
 
-    const newAppID = await rawResp.text();
+export const createNewComment = async (commID, commUserName, comm) => {
+  const rawResp = await fetch(postURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: `${commID}`,
+      username: `${commUserName}`,
+      comment: `${comm}`,
+    }),
+  });
 
-    return newAppID;
-  }
-  
-  export const createNewComment = async(commID, commUserName, comm) => {
-    const rawResp = await fetch(postURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        item_id: `${commID}`,
-        username: `${commUserName}`,
-        comment: `${comm}`,
-      })
-    });
-
-    getComments(commID)
+  getComments(commID)
     .then((comments) => {
       const divComments = document.querySelector('.comments');
       divComments.innerHTML = '';
@@ -53,23 +45,11 @@
           popUpCommentsContainer.appendChild(listItem);
         }
 
-        
         divComments.appendChild(popUpCommentsTitle);
         divComments.appendChild(popUpCommentsContainer);
       }
     });
 
-
-
-    const status = await rawResp;
-    return status;
-  }
-  
-  export const getComments = async (itemID) => {
-      let getURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments?item_id=${itemID}`;
-      const rawResp = await fetch(getURL);
-      const comments = await rawResp.json();
-      return comments;
-  }
-
-
+  const status = await rawResp;
+  return status;
+};
