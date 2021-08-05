@@ -6,6 +6,14 @@
   line-height: $height;
 }
 
+@mixin open-text($size, $weight, $height, $increase: 0.3) {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: calc(#{$size} + #{$increase}vw);
+  font-weight: $weight;
+  line-height: $height;
+}
+
 @mixin flex($direction, $align: false, $justify: false) {
   display: flex;
   flex-direction: $direction;
