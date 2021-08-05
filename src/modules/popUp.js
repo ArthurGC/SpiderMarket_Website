@@ -1,5 +1,6 @@
 import { getDataLocalStorage } from './store.js';
 import { getComments } from './comments.js';
+import { addCounterCommmentDOM } from './commentCounter.js';
 
 const image = document.querySelector('.image');
 const title = document.querySelector('.modal-title');
@@ -22,7 +23,7 @@ const commentsPopUp = (id) => {
       if (comments.length > 0) {
         const popUpCommentsTitle = document.createElement('h3');
         popUpCommentsTitle.className = 'comments-title';
-        popUpCommentsTitle.textContent = 'Comments';
+        popUpCommentsTitle.innerHTML = 'Comments <span class="counter">12</span>';
 
         const popUpCommentsContainer = document.createElement('ul');
         popUpCommentsContainer.id = 'comments-list';
@@ -42,6 +43,7 @@ const commentsPopUp = (id) => {
 
         divComments.appendChild(popUpCommentsTitle);
         divComments.appendChild(popUpCommentsContainer);
+        addCounterCommmentDOM();
       }
     });
 };

@@ -1,3 +1,5 @@
+import { addCounterCommmentDOM } from './commentCounter.js';
+
 const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
 
 export const getComments = async (itemID) => {
@@ -27,7 +29,7 @@ export const createNewComment = async (commID, commUserName, comm) => {
       if (comments.length > 0) {
         const popUpCommentsTitle = document.createElement('h3');
         popUpCommentsTitle.className = 'comments-title';
-        popUpCommentsTitle.textContent = 'Comments';
+        popUpCommentsTitle.innerHTML = 'Comments <span class="counter"></span>';
 
         const popUpCommentsContainer = document.createElement('ul');
         popUpCommentsContainer.id = 'comments-list';
@@ -47,6 +49,7 @@ export const createNewComment = async (commID, commUserName, comm) => {
 
         divComments.appendChild(popUpCommentsTitle);
         divComments.appendChild(popUpCommentsContainer);
+        addCounterCommmentDOM();
       }
     });
 
