@@ -8,4 +8,4 @@ export const addCounterDOM = () => {
   counterDOM.innerHTML = `<b>(${itemCounter()})<b>`;
 };
 
-// module.exports = itemCounter;
+export default itemCounter;
