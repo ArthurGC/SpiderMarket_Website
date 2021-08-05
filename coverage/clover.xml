@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628114956555" clover="3.2.0">
-  <project timestamp="1628114956555" name="All files">
-    <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="10" coveredelements="7" complexity="0" loc="8" ncloc="8" packages="2" files="2" classes="2"/>
+<coverage generated="1628201126026" clover="3.2.0">
+  <project timestamp="1628201126026" name="All files">
+    <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2" elements="18" coveredelements="12" complexity="0" loc="14" ncloc="14" packages="2" files="4" classes="4"/>
     <package name="__test__">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="htmltemplate.js" path="/home/arthur/Downloads/Microverse Projects/Api-webapp-capstone-project/src/__test__/htmltemplate.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Popuptemplate.js" path="/home/ricardo/the_odin_project/Api-webapp-capstone-project/src/__test__/Popuptemplate.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="htmltemplate.js" path="/home/ricardo/the_odin_project/Api-webapp-capstone-project/src/__test__/htmltemplate.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="modules">
-      <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="itemCounter.js" path="/home/arthur/Downloads/Microverse Projects/Api-webapp-capstone-project/src/modules/itemCounter.js">
-        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="commentCounter.js" path="/home/ricardo/the_odin_project/Api-webapp-capstone-project/src/modules/commentCounter.js">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="itemCounter.js" path="/home/ricardo/the_odin_project/Api-webapp-capstone-project/src/modules/itemCounter.js">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
   </project>
