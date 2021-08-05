@@ -1,5 +1,5 @@
 import { getDataLocalStorage } from './store.js';
-import involvement from './comments.js';
+import {getComments} from './comments.js';
 
 const image = document.querySelector('.image');
 const title = document.querySelector('.modal-title');
@@ -15,7 +15,7 @@ const openPopUp = () => {
 };
 
 export const commentsPopUp = (id) => {
-  involvement.getComments(id)
+  getComments(id)
     .then((comments) => {
       if (comments.length > 0) {
         const popUpCommentsTitle = document.createElement('h3');
@@ -54,6 +54,7 @@ export const fillPopUp = (event) => {
     const element = mainGrid[id];
     image.setAttribute('src', `${element.show.image.original}`);
     title.textContent = `${element.show.name}`;
+    title.dataset.id = id;
     paragraph.innerHTML = `${element.show.summary}`;
     commentsPopUp(id);
   }
