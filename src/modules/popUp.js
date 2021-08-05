@@ -1,4 +1,5 @@
 import { getDataLocalStorage } from './store.js';
+import involvement from './comments.js';
 
 const image = document.querySelector('.image');
 const title = document.querySelector('.modal-title');
@@ -13,6 +14,37 @@ const openPopUp = () => {
   main.style.overflow = 'hidden';
 };
 
+export const commentsPopUp = (id) => {
+  involvement.getComments(id)
+    .then((comments) => {
+      if (comments.length > 0) {
+        const popUpCommentsTitle = document.createElement('h3');
+        popUpCommentsTitle.className = 'comments-title';
+        popUpCommentsTitle.textContent = 'Comments';
+
+        const popUpCommentsContainer = document.createElement('ul');
+        popUpCommentsContainer.id = 'comments-list';
+        popUpCommentsContainer.className = 'comments-list';
+
+        for (let i = 0; i < comments.length; i += 1) {
+          comments[i].creation_date = comments[i].creation_date.replace('-', '/').replace('-', '/');
+          const listItem = document.createElement('li');
+          listItem.className = 'comm-list-item';
+
+          const displayComment = document.createElement('p');
+          displayComment.className = 'comment';
+          displayComment.textContent = `${comments[i].creation_date} ${comments[i].username}: ${comments[i].comment}`;
+          listItem.appendChild(displayComment);
+          popUpCommentsContainer.appendChild(listItem);
+        }
+
+        const divComments = document.querySelector('.commments');
+        divComments.appendChild(popUpCommentsTitle);
+        divComments.appendChild(popUpCommentsContainer);
+      }
+    });
+};
+
 export const fillPopUp = (event) => {
   const isButton = event.target.classList.contains('button');
   if (isButton) {
@@ -23,6 +55,7 @@ export const fillPopUp = (event) => {
     image.setAttribute('src', `${element.show.image.original}`);
     title.textContent = `${element.show.name}`;
     paragraph.innerHTML = `${element.show.summary}`;
+    commentsPopUp(id);
   }
 };
 
