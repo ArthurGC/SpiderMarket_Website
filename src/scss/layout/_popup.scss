@@ -15,7 +15,7 @@
     float: right;
     font-size: calc(2rem + 0.5vw);
     cursor: pointer;
-    transition: color .5s;
+    transition: color 0.5s;
   }
 
   .image-container {
@@ -74,7 +74,8 @@
       .form-item {
         input {
           @include muli-text(14px, 500, 24px);
-          transition: border .5s;
+
+          transition: border 0.5s;
           margin: 0.8rem 0;
           padding: 0.4rem 1rem;
           border-radius: 8px;
@@ -82,7 +83,8 @@
 
         .inputComment {
           @include muli-text(14px, 500, 24px);
-          transition: border .5s;
+
+          transition: border 0.5s;
           margin: 0.8rem 0;
           padding: 0.4rem 1rem;
           border-radius: 8px;
@@ -92,11 +94,13 @@
 
         button {
           margin-top: 0.5rem;
-          padding: 0.5rem .8rem 0.3rem;
+          padding: 0.5rem 0.8rem 0.3rem;
           text-align: center;
           cursor: pointer;
           border: none;
+
           @include muli-text(12px, 700, 24px);
+
           text-transform: uppercase;
           color: #fff;
           background: rgb(44, 42, 116);
