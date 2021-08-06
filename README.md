@@ -8,6 +8,11 @@ In this project, We set up our API webapp capstone project web page.
 
 [Live Preview Link](https://arthurgc.github.io/Api-webapp-capstone-project/)
 
+
+## :red_circle: Preview Video
+
+[Live Preview Video](https://loom.com/share/0835023920d145dfa744d5817fbc7944)
+
 ## :hammer: Built With
 
 - HTML, SCSS, JS and Webpack.
