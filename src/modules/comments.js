@@ -1,9 +1,9 @@
 import { addCounterCommmentDOM } from './commentCounter.js';
 
-const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments';
+const postURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EI3xf0gsfRF6W0oy4pU3/comments';
 
 export const getComments = async (itemID) => {
-  const getURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1skhHeMuaX5lQlDsoElJ/comments?item_id=${itemID}`;
+  const getURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EI3xf0gsfRF6W0oy4pU3/comments?item_id=${itemID}`;
   const rawResp = await fetch(getURL);
   const comments = await rawResp.json();
   return comments;
