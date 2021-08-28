@@ -4,9 +4,13 @@
 
 In this project, We set up our API webapp capstone project web page.
 
+## Screenshot
+
+![SpiderMarket preview](/src/assests/SpiderMarket_preview.png)
+
 ## :red_circle: Live Demo
 
-[Live Preview Link](https://arthurgc.github.io/Api-webapp-capstone-project/)
+[Live Preview Link](https://arthurgc.github.io/SpiderMarket_Website/)
 
 
 ## :red_circle: Preview Video
@@ -19,7 +23,7 @@ In this project, We set up our API webapp capstone project web page.
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/ArthurGC/Api-webapp-capstone-project).
+1. Go to the [repository page](https://github.com/ArthurGC/SpiderMarket_Website).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
 4. Run `npm install` to install the packages and dependencies.
@@ -57,7 +61,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ArthurGC/Api-webapp-capstone-project/issues).
+Feel free to check the [issues page](https://github.com/ArthurGC/SpiderMarket_Website/issues).
 
 ## :grey_exclamation: Acknowledgments
 
