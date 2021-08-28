@@ -6,7 +6,7 @@ In this project, We set up our API webapp capstone project web page.
 
 ## Screenshot
 
-![SpiderMarket preview](/src/assests/SpiderMarket_preview.png)
+![SpiderMarket preview](/src/assests/SpiderMarket_preview_2.png)
 
 ## :red_circle: Live Demo
 
