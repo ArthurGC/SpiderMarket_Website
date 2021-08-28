@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# API WebApp - Capstone Project
+# SpiderMarket Website - Capstone Project
 
 In this project, We set up our API webapp capstone project web page.
 
